@@ -16,7 +16,7 @@ namespace OmicronCase.Domain.Entities
         public void SetIsActive()
         {
             IsActive = Category !=null;
-            IsActive = StockQuantity >= LimitStock;
+            IsActive = StockQuantity > LimitStock;
         }
     }
 }
