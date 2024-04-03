@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OmicronCase")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0b6c959f4d6254756bb9a8e3ff7b73e4cfe5a94")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ecfea3463f9712348062a1f4bb7001dbd8f8f26")]
 [assembly: System.Reflection.AssemblyProductAttribute("OmicronCase")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OmicronCase")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
