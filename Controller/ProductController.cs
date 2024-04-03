@@ -44,7 +44,6 @@ namespace OmicronCase.WebAPI.Controllers
                 newProduct.Category = productCreateModel.Category;
                 newProduct.StockQuantity = productCreateModel.StockQuantity;
                 newProduct.LimitStock = productCreateModel.LimitStock;
-                newProduct.IsActive = productCreateModel.IsActive;
                 newProduct.SetIsActive();
                 newProduct = await _productService.CreateProductAsync(newProduct);
                 return CreatedAtAction(nameof(GetProduct), new { id = newProduct.Id }, new BaseResponse<Product>(true, "Product created successfully", newProduct));
@@ -56,19 +55,31 @@ namespace OmicronCase.WebAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProduct(Product product)
+        public async Task<IActionResult> PutProduct(int id, ProductCreateModel productCreateModel)
         {
             try
             {
-                await _productService.UpdateProductAsync(product);
-                product.SetIsActive();
+                var existingProduct = await _productService.GetProductByIdAsync(id);
+                if (existingProduct == null)
+                {
+                    return NotFound(new BaseResponse<Product>(false, "Product not found"));
+                }
+                existingProduct.Title = productCreateModel.Title;
+                existingProduct.Description = productCreateModel.Description;
+                existingProduct.Category = productCreateModel.Category;
+                existingProduct.StockQuantity = productCreateModel.StockQuantity;
+                existingProduct.LimitStock = productCreateModel.LimitStock;
+                existingProduct.SetIsActive();
+
+                await _productService.UpdateProductAsync(existingProduct);
                 return NoContent();
             }
             catch (Exception ex)
             {
-                return BadRequest(new BaseResponse<Product>(false, ex.Message));
+            return BadRequest(new BaseResponse<Product>(false, ex.Message));
             }
         }
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProduct(int id)

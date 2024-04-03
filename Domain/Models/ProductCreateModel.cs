@@ -7,9 +7,8 @@ namespace OmicronCase.Domain.Models
         
         public  string Title { get; set; }
         public string Description { get; set; }
-        public  Category Category { get; set; }
+        public  required Category Category { get; set; }
         public int StockQuantity { get; set; }
         public int LimitStock { get; set; }
-        public bool IsActive { get; set; }
     }
 }
