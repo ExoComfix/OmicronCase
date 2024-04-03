@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MDb6kOsMrA/CdeH0h4NSMYjXbvj2blwa+tZF8We5wC3bo24YDKfMmuXzI366GS6hb1VYjGv/gGYcUV0TqX2pWA==",
+  "dgSpecHash": "rI/zeuo7cKimL1uD2uQll2rQvQmzevPugz1fMWDk7KKjLzZ/laEFoN8skXtw5twq1dzwdCYHYn7W4nPgXM4DNA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ooztu\\Desktop\\OmicronTestCase\\OmicronCase\\OmicronCase.csproj",
+  "projectFilePath": "C:\\Users\\ooztu\\Desktop\\OmicronCase\\OmicronCase.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ooztu\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ooztu\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
